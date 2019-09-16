@@ -42,7 +42,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="60dp"
         android:src="@drawable/logo"
-        android:elevation="0.5dp"
+        android:elevation="1dp"
 
         app:civ_border_overlay="true"
         />
