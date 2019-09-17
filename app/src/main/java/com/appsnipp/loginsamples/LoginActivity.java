@@ -60,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
             Toast t=new Toast(getApplicationContext());
             t.setDuration(Toast.LENGTH_SHORT);
             t.setView(layout);
-
+t.show();
             Intent i = new Intent(LoginActivity.this, Navigation_Activity.class);
             startActivity(i);
         }
