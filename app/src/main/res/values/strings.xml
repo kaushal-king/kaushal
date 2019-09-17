@@ -8,18 +8,17 @@
     <string name="title_activity_navigation_">Navigation_Activity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Sdio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Kaushik Mokariya</string>
+    <string name="nav_header_subtitle">mokariyakaushik@gmail.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_home">DashBoard</string>
+    <string name="menu_gallery">Account</string>
+    <string name="menu_slideshow">Members</string>
 
-    <string name="menu_tools">Tools</string>
-    <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_tools">Election/Poll</string>
+    <string name="menu_share">Document</string>
+    <string name="menu_send">Resource</string>
     <string-array name="Roles_array">
         <item><b>Role</b></item>
         <item>Member</item>
@@ -34,8 +33,6 @@
         <item>C</item>
         <item>D</item>
     </string-array>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string-array name="House_Number_spinner">
         <item>101</item>
         <item>102</item>

@@ -57,8 +57,8 @@ public class Navigation_Activity extends AppCompatActivity implements  Navigatio
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,
-                R.id.nav_tools, R.id.nav_share, R.id.nav_send)
+                R.id.nav_home, R.id.nav_account, R.id.nav_member,
+                R.id.nav_election, R.id.nav_document, R.id.nav_resource)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -97,20 +97,20 @@ public class Navigation_Activity extends AppCompatActivity implements  Navigatio
             fragment = new DashBoardFragment();
 
 
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_account) {
             fragment = new AccountFragment();
 
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_member) {
             fragment = new MembersFragment();
 
-        } else if (id == R.id.nav_tools) {
+        } else if (id == R.id.nav_election) {
             fragment = new ElectionFragment();
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_document) {
             fragment = new DocumentFragment();
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_resource) {
             fragment = new ResourceFragment();
 
 
