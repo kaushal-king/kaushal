@@ -1,9 +1,14 @@
 package com.appsnipp.loginsamples.Navigation_Profile;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
+import android.view.MenuItem;
 import android.view.View;
 
 import androidx.navigation.NavController;
@@ -17,11 +22,20 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.widget.Toast;
 
+import com.appsnipp.loginsamples.Navigation_Profile.ui.account.AccountFragment;
+import com.appsnipp.loginsamples.Navigation_Profile.ui.dashboard.DashBoardFragment;
+import com.appsnipp.loginsamples.Navigation_Profile.ui.resource.ResourceFragment;
+import com.appsnipp.loginsamples.Navigation_Profile.ui.document.DocumentFragment;
+import com.appsnipp.loginsamples.Navigation_Profile.ui.members.MembersFragment;
+import com.appsnipp.loginsamples.Navigation_Profile.ui.electionandpoll.ElectionFragment;
 import com.appsnipp.loginsamples.R;
 
-public class Navigation_Activity extends AppCompatActivity {
-
+public class Navigation_Activity extends AppCompatActivity implements  NavigationView.OnNavigationItemSelectedListener{
+    Fragment fragment;
+    FragmentManager manager;
+    FragmentTransaction transaction;
     private AppBarConfiguration mAppBarConfiguration;
 
     @Override
@@ -73,4 +87,41 @@ public class Navigation_Activity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
-}
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        int id = menuItem.getItemId();
+
+        if (id == R.id.nav_home) {
+            Toast.makeText(this, "Activity is refresh", Toast.LENGTH_SHORT).show();
+            fragment = new DashBoardFragment();
+
+
+        } else if (id == R.id.nav_gallery) {
+            fragment = new AccountFragment();
+
+
+        } else if (id == R.id.nav_slideshow) {
+            fragment = new MembersFragment();
+
+        } else if (id == R.id.nav_tools) {
+            fragment = new ElectionFragment();
+
+        } else if (id == R.id.nav_share) {
+            fragment = new DocumentFragment();
+
+        } else if (id == R.id.nav_send) {
+            fragment = new ResourceFragment();
+
+
+        }
+        transaction = manager.beginTransaction();
+        transaction.add(R.id.nav_host_fragment, fragment, "A");
+        transaction.addToBackStack("addA");
+        transaction.commit();
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+    }
+

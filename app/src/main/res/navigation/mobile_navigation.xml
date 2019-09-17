@@ -7,37 +7,37 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.appsnipp.loginsamples.Navigation_Profile.ui.home.HomeFragment"
+        android:name="com.appsnipp.loginsamples.Navigation_Profile.ui.dashboard.DashBoardFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.appsnipp.loginsamples.Navigation_Profile.ui.gallery.GalleryFragment"
+        android:name="com.appsnipp.loginsamples.Navigation_Profile.ui.account.AccountFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_account" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.appsnipp.loginsamples.Navigation_Profile.ui.slideshow.SlideshowFragment"
+        android:name="com.appsnipp.loginsamples.Navigation_Profile.ui.members.MembersFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_member" />
 
     <fragment
         android:id="@+id/nav_tools"
-        android:name="com.appsnipp.loginsamples.Navigation_Profile.ui.tools.ToolsFragment"
+        android:name="com.appsnipp.loginsamples.Navigation_Profile.ui.electionandpoll.ElectionFragment"
         android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
+        tools:layout="@layout/fragment_election" />
 
     <fragment
         android:id="@+id/nav_share"
-        android:name="com.appsnipp.loginsamples.Navigation_Profile.ui.share.ShareFragment"
+        android:name="com.appsnipp.loginsamples.Navigation_Profile.ui.document.DocumentFragment"
         android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
+        tools:layout="@layout/fragment_document" />
 
     <fragment
         android:id="@+id/nav_send"
-        android:name="com.appsnipp.loginsamples.Navigation_Profile.ui.send.SendFragment"
+        android:name="com.appsnipp.loginsamples.Navigation_Profile.ui.resource.ResourceFragment"
         android:label="@string/menu_send"
-        tools:layout="@layout/fragment_send" />
+        tools:layout="@layout/fragment_resources" />
 </navigation>

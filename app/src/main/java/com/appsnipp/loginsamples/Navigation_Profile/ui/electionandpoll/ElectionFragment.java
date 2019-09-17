@@ -1,4 +1,4 @@
-package com.appsnipp.loginsamples.Navigation_Profile.ui.slideshow;
+package com.appsnipp.loginsamples.Navigation_Profile.ui.electionandpoll;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
@@ -13,17 +13,17 @@ import android.widget.TextView;
 
 import com.appsnipp.loginsamples.R;
 
-public class SlideshowFragment extends Fragment {
+public class ElectionFragment extends Fragment {
 
-    private SlideshowViewModel slideshowViewModel;
+    private ElectionViewModel electionViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        slideshowViewModel =
-                ViewModelProviders.of(this).get(SlideshowViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
-        final TextView textView = root.findViewById(R.id.text_slideshow);
-        slideshowViewModel.getText().observe(this, new Observer<String>() {
+        electionViewModel =
+                ViewModelProviders.of(this).get(ElectionViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_election, container, false);
+        final TextView textView = root.findViewById(R.id.text_tools);
+        electionViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
