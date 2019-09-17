@@ -19,6 +19,7 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string-array name="Roles_array">
         <item><b>Role</b></item>
         <item>Member</item>
@@ -33,6 +34,8 @@
         <item>C</item>
         <item>D</item>
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
     <string-array name="House_Number_spinner">
         <item>101</item>
         <item>102</item>

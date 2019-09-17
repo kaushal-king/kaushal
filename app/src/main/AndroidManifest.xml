@@ -13,11 +13,7 @@
             android:name=".Navigation_Profile.Navigation_Activity"
             android:label="@string/title_activity_navigation_"
             android:theme="@style/AppTheme.NoActionBar.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".registration.Forgotpassword_form"></activity>
         <activity android:name=".complain.complainadd" />
@@ -25,7 +21,11 @@
         <activity android:name=".registration.password"></activity>
         <activity android:name=".detailtest_activity" />
         <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

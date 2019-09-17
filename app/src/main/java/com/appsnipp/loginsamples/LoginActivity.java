@@ -3,11 +3,15 @@ package com.appsnipp.loginsamples;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.appsnipp.loginsamples.Navigation_Profile.Navigation_Activity;
 import com.appsnipp.loginsamples.registration.Forgotpassword_form;
 import com.appsnipp.loginsamples.registration.Registration;
 import com.appsnipp.loginsamples.registration.password;
@@ -49,6 +53,16 @@ public class LoginActivity extends AppCompatActivity {
         }
         if (s2.isEmpty()){
             pass.setError("enter pssword");
+        }
+        if(s2.equals("kaushal") && s1.equals("7383846827")) {
+            LayoutInflater li = getLayoutInflater();
+            View layout = li.inflate(R.layout.toast,(ViewGroup) findViewById(R.id.toast));
+            Toast t=new Toast(getApplicationContext());
+            t.setDuration(Toast.LENGTH_SHORT);
+            t.setView(layout);
+            t.show();
+            Intent i = new Intent(LoginActivity.this, Navigation_Activity.class);
+            startActivity(i);
         }
     }
 }
